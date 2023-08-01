@@ -1,0 +1,124 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 20px;
+  --Gray: hsl(0, 0%, 59%);
+  --PrimeBlue: hsl(223, 87%, 63%);
+  --PaleBlue: hsl(223, 100%, 88%);
+}
+
+body {
+  font-family: "Libre Franklin", sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 100%;
+  text-align: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+.container header img {
+  margin: 1rem;
+}
+.container header h1 {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--Gray);
+  margin: 1rem;
+}
+.container header h1 span {
+  font-weight: 700;
+  color: black;
+}
+.container header p {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.container main img {
+  margin-top: 3rem;
+  width: 100%;
+}
+.container main form input {
+  display: block;
+  width: 100%;
+  border: solid 1px var(--PaleBlue);
+  border-radius: 1rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  height: 2rem;
+  box-shadow: 2px 5px 8px -4px var(--PaleBlue);
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container main form input:focus {
+  outline: transparent;
+}
+.container main form input:nth-of-type(2) {
+  background-color: var(--PrimeBlue);
+  color: white;
+}
+.container main form p#notification {
+  color: red;
+  font-size: 0.8rem;
+  margin: 1rem auto;
+}
+.container footer {
+  margin-top: 3rem;
+}
+.container footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+.container footer ul li {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-radius: 50%;
+  border: 1px solid var(--PaleBlue);
+}
+.container footer ul li i {
+  color: var(--PrimeBlue);
+  width: 1rem;
+  height: 1rem;
+}
+.container footer p {
+  color: var(--Gray);
+}
+
+.error {
+  border-color: red !important;
+}
+
+.success {
+  color: green !important;
+}
+
+@media (min-width: 960px) {
+  .container main form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .container main form input {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .container main form input:last-of-type {
+    flex-basis: 20%;
+  }
+  .container main form p#notification {
+    order: 5;
+    display: block;
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */
